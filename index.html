@@ -11,7 +11,7 @@
 <body>
 
   <div class="G1">
-    <input id="player-input" type="text"  placeholder="Escribe tu nombre..." autofocus name="nombre1" >
+    <input id="player-input" type="text"  placeholder="Escribe tu nombre..." autofocus name="nombre1" onkeydown="guardarNombre()" >
     <button onclick="guardarNombre()">Guardar</button>
     <h2 class=nombre1></h2>
     <div class="name1 black">
@@ -20,54 +20,77 @@
     <div class="g1">
     </div>
     <div class="e">
-      <p>¿Morty vs Rick vs Jerry?</p>
+      <p>Jerry vs Morty vs Rick</p>
     </div>
     <!--<div class="imagenes1">
       <img src="Imagenes/Captura.PNG" alt="">
     </div>-->
-   <label class="ppt1" for"rock-input">
-      <img src="https://pm1.narvii.com/6545/c6c3b4cf93eb1f3e49d252db5daeaefbcb3ad446_hq.jpg">
-    </label>
-    <label class="ppt1" for"paper-input">
-      <img src="https://www.sccpre.cat/mypng/detail/41-417246_morty-smith-rick-and-morty-png-transparent.png">
-    </label>
-    <label class="ppt1" for"scissors-input">
-      <img src="https://img2.freepng.es/20180402/vaw/kisspng-rick-sanchez-morty-smith-television-show-rick-and-rick-and-morty-5ac21f7c59bc21.4757555615226714843676.jpg">
-    </label>
-    <!--<div class="ppt1">
-      <input id="" type="text" name="Juego2">
-      <button onclick="">Jugar</button>
-    </div>-->
+    <form class="botones1" >
+      <label class="ppt1" for="rock-input">
+         <img src="Imagenes/Jerry.PNG">
+       </label>
+       <input id="rock-input" class="p1i"  type="radio" name="player1Input" value="piedra">
+       <label class="ppt1" for="paper-input">
+         <img src="Imagenes/Morty.png">
+       </label>
+       <input id= "paper-input" class="p1i" type="radio" name="player1Input" value="papel">
+       <label class="ppt1" for="scissors-input">
+         <img src="Imagenes/Rick_Sanchez.png">
+       </label>
+       <input  id="scissors-input"class="p1i" type="radio" name="player1Input" value="tijera">
+    </form>
+
+     <div class="botonJugar" onclick="tiroJugador1()">
+      <img src="Imagenes/portal.png">
+      <h4 class=texto-jugar>Jugar</h4>
+
+    </div>
 </div>
 
   <div class="G2">
-    <input id="player-input" type="text" placeholder="Escribe tu nombre..." name="nombre1" >
-    <button onclick="guardarNombre()">Guardar</button>
+    <input id="player2-input" type="text" placeholder="Escribe tu nombre..." name="nombre2"  onkeydown="guardarNombre2()" >
+    <button onclick="guardarNombre2()">Guardar</button>
     <h2 class="nombre2 "></h2>
     <div class="name2 transparencia">
       <p>Jugador 2: </p>
     </div>
       <div class="g2">
+
       </div>
       <div class="ee">
-        <p>¿Piedra,papel o tijeras?</p>
+        <p>Jerry vs Morty vs Rick</p>
       </div>
     <!--<div class="imagenes2">
         <img src="Imagenes/Captura.PNG" alt="">
       </div>-->
-      <label class="ppt2" for"rock-input">
-        <img src="https://pm1.narvii.com/6545/c6c3b4cf93eb1f3e49d252db5daeaefbcb3ad446_hq.jpg">
-      </label>
-      <label class="ppt2" for"paper-input">
-        <img src="https://www.sccpre.cat/mypng/detail/41-417246_morty-smith-rick-and-morty-png-transparent.png">
-      </label>
-      <label class="ppt2" for"scissors-input">
-        <img src="https://vignette.wikia.nocookie.net/rick-y-morty-espanol/images/d/dd/Rick.png/revision/latest?cb=20170327172715&path-prefix=es">
-      </label>
-      <input id="paper-input" type="radio" name="selection">
+      <form class="botones2">
+        <label class="ppt2" for="rock2-input">
+          <img src="Imagenes/Jerry.PNG">
+        </label>
+        <input id="rock2-input" class="p2i"  type="radio" name="player2Input" value="piedra">
+        <label class="ppt2" for="paper2-input">
+          <img src="Imagenes/Morty.png">
+        </label>
+        <input id="paper2-input" class="p2i"  type="radio" name="player2Input" value="papel">
+        <label class="ppt2" for="scissors2-input">
+          <img src="Imagenes/Rick_Sanchez.png">
+        </label>
+        <input id="scissors2-input" class="p2i"  type="radio" name="player2Input" value="tijera">
+      </form>
+      <div class="botonJugar" onclick="tiroJugador2()">
+        <img src="Imagenes/portal.png">
+        <h4 class=texto-jugar>Jugar</h4>
 
       </div>
 
+
+      </div>
+
+    </div>
+    <div class="Njugador">
+      <p>🏆 Ganador: 🏆 </p>
+    </div>
+    <div class="Ganador">
     </div>
 
 
